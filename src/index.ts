@@ -4,17 +4,22 @@ import logger from 'morgan';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 
+import requestId from './request-id/request-id.js';
+
 const app: Express = express();
 const port = 3000;
 
+app.use(requestId());
 app.use(responseTime());
 app.use(logger('dev'));
-app.use(rateLimit({
-    windowMs: 1000 * 15,
-    max: 3,
-    standardHeaders: true,
-    legacyHeaders: false
-}));
+app.use(
+    rateLimit({
+        windowMs: 1000 * 15,
+        max: 3,
+        standardHeaders: true,
+        legacyHeaders: false,
+    })
+);
 app.use(helmet());
 
 app.get('/', (_: Request, res: Response) => {
