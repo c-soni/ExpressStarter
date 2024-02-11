@@ -11,3 +11,9 @@ Commands:
 4. `yarn serve` - serve and watch for changes (to `dist`).
 5. `yarn clean` - delete `dist`.
 6. `yarn format` - run prettier.
+
+Docker Commands:
+1. `docker build [-t <tag>] .` - builds and outputs an image.
+2. `docker run [-p <host_port>:<container_port>][-d] <image>` - runs image with proper port mapping.
+
+Note: The server listens on port `3000`, so `<container_port>` should always be `3000`.
