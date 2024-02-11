@@ -22,6 +22,8 @@ app.use(
     })
 );
 app.use(helmet());
+
+// CORS headers
 app.use((_: Request, res: Response, next: NextFunction) => {
     res.appendHeader('Access-Control-Allow-Origin', '*');
     res.appendHeader('Access-Control-Allow-Headers', '*');
