@@ -8,18 +8,18 @@ module.exports = {
     target: 'node',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js',
+        filename: 'index.js'
     },
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.ts', '.js']
     },
     watch: NODE_ENV === 'development',
     module: {
         rules: [
             {
                 test: /\.ts$/,
-                use: ['ts-loader'],
-            },
-        ],
-    },
+                use: ['ts-loader']
+            }
+        ]
+    }
 };

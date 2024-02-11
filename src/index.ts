@@ -18,7 +18,7 @@ app.use(
         windowMs: 1000 * 15,
         max: 3,
         standardHeaders: true,
-        legacyHeaders: false,
+        legacyHeaders: false
     })
 );
 app.use(helmet());
