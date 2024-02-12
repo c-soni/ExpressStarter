@@ -3,6 +3,7 @@
 A simple starter project template for NodeJS, Express and Typescript.
 
 Includes `webpack` build support, watch mode for development and a bunch of useful `express` middleware for quality-of-life, right out of the box.
+Run `corepack enable` to use default `yarn` for this project.
 
 Commands:
 1. `yarn build` - build the project (outputs to `dist`).
